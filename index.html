@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pierre-Henri Van de Velde</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Pierre-Henri Van de Velde, software engineer, software architect, java developer">
+  <meta name="author" content="Pierre-Henri Van de Velde">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index,follow">
+	
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+  <link rel="canonical" href="http://phury.github.io" />
+  <link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  
+  
+  <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+<style>
+
+@import 'https://fonts.googleapis.com/css?family=Merriweather';
+@import 'https://fonts.googleapis.com/css?family=Lobster';
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1em;
+}
+header, main, footer {
+  max-width: 1024px;
+  margin: 1em auto;
+  padding: 1em;
+}
+  
+/* typography */
+  
+p { color: #555; line-height: 2em; font-size: 1.3em; }
+
+p > span { 
+  font-family: 'Lobster', serif;
+  font-size: 1.6em; 
+  background-color: #2DBB28; 
+  color: #fff; 
+  padding: 0 0.3em; 
+}
+
+p > a, nav.navigation > a { color: #2DBB28; padding: 0 0.1em; }
+p > a:hover, nav.navigation > a:hover, p > a.active, nav.navigation > a.active { background-color: #2DBB28; color: #fff;  }
+  
+p.summary {
+  font-family: monospace;
+  margin: 75px 5em;
+  letter-spacing: 1px;
+  color: #444444;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  text-align: justify;
+}  
+  
+  
+  
+img.avatar {
+  border-radius: 50%;
+  float: left;
+  margin-right: 3em;
+}
+nav.navigation {
+  text-align: center;
+  font-size: 1.6em;
+}
+ 
+nav.social > a {
+  line-height: 0; 
+  font-size: 0;
+  color: transparent; 
+}
+  
+  
+  
+/* gallery */
+div.gallery-wrapper {
+  width: 780px;
+  text-align: center;
+  margin: 75px auto;
+}
+div.gallery-wrapper br { clear: both; }
+div.gallery {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+  
+div.gallery > a {
+  display: block;
+  float: left;
+  margin: 0 12px 12px 0;
+  width: 171px;
+  line-height: 0;
+}
+  
+div.gallery > a.main {
+  width: auto;
+  height: auto;
+}
+  
+div.gallery > a > img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+/* fix animate.css */
+  
+span.animated {
+  display: inline-block;
+}
+  
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="gallery/medium_profile1.jpg" class="avatar" alt="Profile picture">
+    <p>Hi!</p>
+    <p>My name is <span class="animated slideInLeft">Pierre-Henri Van de Velde</span></p>
+    <p>I am a <span class="animated slideInLeft">Software Architect</span></p>
+</header>
+<main>
+  <p class="summary">
+      ... but I try to keep it down to earth. I <a href="https://github.com/Phury">code</a> in and outside of work. I am very pationate about building software. I always want to understand how things work from a high level perspective but also under the hood. My motto is <dfn>`kaizen`</dfn> or continuous improvement, which I learned through my practice of <a href="http://www.yuhikendo.be/YHaccueil.html">kendo</a>. Other than that I love <a href="http://mapleleafs.nhl.com/">ice hockey</a> and I try to develop an eye for <a href="https://www.instagram.com/phvdv/">photography</a>.
+  </p>    
+  <nav class="navigation">
+    <a href="index.html" class="active">about</a>
+    <a href="http://phulkor.tumblr.com/">blog</a>
+    <a href="https://www.instagram.com/phvdv/">photos</a>
+    <!--
+    <a href="#">kendo</a>
+    <a href="#">projects</a>
+    -->
+  </nav>
+  <div class="gallery-wrapper">
+    <div class="gallery">
+      <a class="main" href="gallery/hobby_photo.jpg" 
+          data-lightbox="gallery-set"
+          data-title="A photowalk at the Evergreen Brick Works in Toronto">
+        <img src="gallery/small_hobby_photo.jpg">
+      </a>
+      <a href="gallery/profile1.jpg" 
+          data-lightbox="gallery-set"
+          data-title="Looking so fly!">
+        <img src="gallery/small_profile1.jpg">
+      </a>
+      <a href="gallery/hobby_icehokey.jpg" 
+          data-lightbox="gallery-set"
+          data-title="A buddy and I fighting for the puck">
+        <img src="gallery/small_hobby_icehokey.jpg">
+      </a>
+      <a href="gallery/hobby_kendo.jpg" 
+          data-lightbox="gallery-set"
+          data-title="After kendo practice at the Osaka police with Arima sensei and Ducarme sensei">
+        <img src="gallery/small_hobby_kendo.jpg">
+      </a>
+      <a href="gallery/profile2.jpg" 
+          data-lightbox="gallery-set"
+          data-title="Those skates are a little loose">
+        <img src="gallery/small_profile2.jpg">
+      </a>
+    </div>
+    <br/>
+  </div>
+  <div id="instafeed"></div>
+</main>
+<footer>
+  <nav class="social">
+    <a href="https://github.com/Phury"><img src="img/glyphicons-social-22-github.png" />github</a>
+    <a href="http://stackoverflow.com/users/1598255/ph"><img src="img/glyphicons-social-65-stackoverflow.png" />stackoverflow</a>
+    <a href="https://www.linkedin.com/in/pvandevelde"><img src="img/glyphicons-social-18-linked-in.png" />linkedin</a>
+    <a href="http://phulkor.tumblr.com/"><img src="img/glyphicons-social-9-tumblr.png" />tumblr</a>
+    <a href="https://www.instagram.com/phvdv/"><img src="img/glyphicons-social-33-instagram.png" />instagram</a>
+    <!--
+    <a href="#"><img src="img/glyphicons-social-31-facebook.png" />facebook</a>
+    <a href="#"><img src="img/glyphicons-social-32-twitter.png" />twitter</a>
+    <a href="#"><img src="img/glyphicons-social-3-google-plus.png" />google +</a>
+    <a href="#"><img src="glyphicons-social-36-flickr.png" />flickr</a>
+    -->
+  </nav>  
+</footer>
+<script src="vendor/lightbox2/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
