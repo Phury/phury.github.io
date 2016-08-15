@@ -16,11 +16,10 @@
 <![endif]-->
 
   <link rel="canonical" href="http://phury.github.io" />
-  <link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
+  <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+  <link rel="stylesheet" href="vendor/animate/css/animate.css">
   <link rel="stylesheet" href="css/reset.css">
   
-  
-  <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
 <style>
 
 @import 'https://fonts.googleapis.com/css?family=Merriweather';
@@ -51,23 +50,31 @@ p > span {
 p > a, nav.navigation > a { color: #2DBB28; padding: 0 0.1em; }
 p > a:hover, nav.navigation > a:hover, p > a.active, nav.navigation > a.active { background-color: #2DBB28; color: #fff;  }
   
-p.summary {
+div.summary > p {
   font-family: monospace;
-  margin: 75px 5em;
   letter-spacing: 1px;
   color: #444444;
   font-size: 1.2em;
   letter-spacing: 1px;
   text-align: justify;
 }  
-  
-  
-  
-img.avatar {
+
+header {
+ text-align: center;
+}
+header > img.avatar {
+  border-radius: 50%;
+}
+/*
+header > img.avatar {
   border-radius: 50%;
   float: left;
-  margin-right: 3em;
 }
+header > p {
+ margin-left: 175px;
+}
+*/
+  
 nav.navigation {
   text-align: center;
   font-size: 1.6em;
@@ -79,18 +86,14 @@ nav.social > a {
   color: transparent; 
 }
   
-  
-  
 /* gallery */
 div.gallery-wrapper {
-  width: 780px;
   text-align: center;
-  margin: 75px auto;
+  margin: auto;
+  width: 620px;
 }
 div.gallery-wrapper br { clear: both; }
 div.gallery {
-  width: 100%;
-  height: auto;
   float: left;
 }
   
@@ -113,27 +116,45 @@ div.gallery > a > img {
   height: auto;
   border: 0;
 }
-/* fix animate.css */
+/* add some spacing */
+div.summary, nav.navigation, div.gallery-wrapper {
+  margin-top: 75px;  
+}
   
+/* animate.css tweaks */
 span.animated {
   display: inline-block;
 }
-  
+#role {
+  -webkit-animation-delay: .8s;
+     -moz-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+
+@media (max-width:650px) {
+  div.gallery-wrapper {
+    width: inherit;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <img src="gallery/medium_profile1.jpg" class="avatar" alt="Profile picture">
-    <p>Hi!</p>
-    <p>My name is <span class="animated slideInLeft">Pierre-Henri Van de Velde</span></p>
-    <p>I am a <span class="animated slideInLeft">Software Architect</span></p>
+  <img src="gallery/medium_profile1.jpg" class="avatar" alt="Profile picture">
+  <p>Hi!</p>
+  <p>My name is <span class="animated flipInX" id="name"><nobr>Pierre-Henri</nobr> <nobr>Van de Velde</nobr></span></p>
+  <p>I am a <span class="animated flipInX" id="role">Software Architect</span></p>
 </header>
 <main>
-  <p class="summary">
+  <div class="summary">
+    <p>
       ... but I try to keep it down to earth. I <a href="https://github.com/Phury">code</a> in and outside of work. I am very pationate about building software. I always want to understand how things work from a high level perspective but also under the hood. My motto is <dfn>`kaizen`</dfn> or continuous improvement, which I learned through my practice of <a href="http://www.yuhikendo.be/YHaccueil.html">kendo</a>. Other than that I love <a href="http://mapleleafs.nhl.com/">ice hockey</a> and I try to develop an eye for <a href="https://www.instagram.com/phvdv/">photography</a>.
-  </p>    
+    </p>    
+  </div>
   <nav class="navigation">
     <a href="index.html" class="active">about</a>
     <a href="http://phulkor.tumblr.com/">blog</a>
@@ -143,7 +164,7 @@ span.animated {
     <a href="#">projects</a>
     -->
   </nav>
-  <div class="gallery-wrapper">
+  <div id="pscroll" class="gallery-wrapper">
     <div class="gallery">
       <a class="main" href="gallery/hobby_photo.jpg" 
           data-lightbox="gallery-set"
@@ -173,7 +194,6 @@ span.animated {
     </div>
     <br/>
   </div>
-  <div id="instafeed"></div>
 </main>
 <footer>
   <nav class="social">
@@ -191,5 +211,7 @@ span.animated {
   </nav>  
 </footer>
 <script src="vendor/lightbox2/js/lightbox-plus-jquery.min.js"></script>
+<script>
+</script>
 </body>
 </html>
