@@ -1,0 +1,220 @@
+{
+    "personalInfo": {
+        "firstName": "Pierre-Henri",
+        "lastName": "Van de Velde",
+        "avatar": "https://phury.github.io/gallery/medium_profile1.jpg",
+        "role": "Software Architect",
+        "birthDate": "30-04-1985",
+        "phone": "(+32) 483 37 15 38",
+        "email": "phvdvelde[at]gmail.com",
+        "address": "Rue Konkel 200 bt1\n1200 Bruxelles, Belgique",
+        "social": [
+            {
+                "name": "github",
+                "link": "https://github.com/Phury"
+            },
+            {
+                "name": "stackoverflow",
+                "link": "http://stackoverflow.com/users/1598255/ph"
+            },
+            {
+                "name": "linkedin",
+                "link": "https://www.linkedin.com/in/pvandevelde"
+            },
+            {
+                "name": "tumblr",
+                "link": "http://phulkor.tumblr.com/"
+            },
+            {
+                "name": "instagram",
+                "link": "https://www.instagram.com/phvdv/"
+            }
+        ]
+    },
+    "about": {
+        "en": "I have hand on experience with many IT systems through the various companies he worked for. Passionate about building software I acquired the knowledge to architect, design and implement complex software. I do not shy away from challenges and my excellent Java coding skills make me a meticulous but efficient developer.\nI have very good problem solving skills, I am autonomous but always lend a hand to colleagues in need, be it with design or algorithmic problems, code quality or best practices.\nIn my free time, I keep up with new technologies, buzz frameworks and web development best practices."
+    },
+    "workExperience": [
+        {
+            "company": "Univeris",
+            "branch": "Platform",
+            "project": "",
+            "location": "Toronto",
+            "period": { "from": "29-07-2013", "to": "28-06-2016" },
+            "role": ["Software engineer / Software architect"],
+            "environment": ["J2EE", "JBoss stack", "MSSql", "IntelliJ", "Maven"],
+            "activities": ["Architect", "Scrum master", "developer"],
+            "detail": {
+                "en": "In Univeris, I was an intern and part of the platform team that manages the company's frameworks and internal API's. I had many different roles has I grew more experienced in the company. I started as a developer and got involved in the technical design of new projects where I built the first large scale data transfer between components of Univeris' products offerings. As the team grew in size from two to eight people, I became the scrum master. My technical expertise lead me to support and optimize the legacy system as an architect. I then architected version 1 and 2 of Univeris' API offering, which I also helped develop with two people under my supervision. I continued to develop on top of my new roles and implemented Univeris' internal state machine API; a framework used by other teams in the company. Finally my daily activities also involved advising on best practice/design/coding for the platform team as well as the rest of the company."
+            }
+        },
+        {
+            "company": "Collibra",
+            "branch": "IT",
+            "project": "",
+            "location": "Bruxelles",
+            "period": { "from": "01-06-2012", "to": "01-06-2013" },
+            "role": ["Software engineer"],
+            "environment": ["J2EE Spring stack", "hibernate", "Eclipse", "Maven"],
+            "activities": ["Functional analyst", "Software engineer"],
+            "detail": {
+                "en": "In Collibra, I was responsible for the analysis and development of new functionalities in Collibra’s data governance software. I helped developing REST APIs in Java, Spring and Hibernate. I designed a history view with Hibernate-Envers. I designed a system to generate automatic names defined by rules. I also designed the database versioning solution and best practices with Liquibase."
+            }
+        },
+        {
+            "company": "Alten",
+            "branch": "Belgium",
+            "project": "Buy Way Personal Finance",
+            "location": "Bruxelles",
+            "period": { "from": "01-02-2010", "to": "01-06-2012" },
+            "role": ["J2EE Developer"],
+            "environment": ["J2EE Oracle stack", "Glassfish", "Eclipse", "Maven", "COBOL backend", "Scrum"],
+            "activities": ["Full stack deveveloper", "Scrum planning", "Code review"],
+            "detail": {
+                "en": "I joined the Buy Way Java developers team as a consultant to work on the migration project for the advisor facing applications. This new project was a complete rewrite of the existing applications of the client after the acquisition of Buy Way by Cetelem (BNP Paribas). I was responsible for the development of the user interface with Vaadin as well as the middleware service layer using Java 6 and EJBs. I also helped developing a new framework to communicate with the backend mainframe. As part of my mission, I also maintained and develop new features for Buy Way's home banking website."
+            }
+        },
+        {
+            "company": "Alten",
+            "branch": "Belgium",
+            "project": "I.R.I.S. Products and Technologies",
+            "location": "Louvain-La-Neuve",
+            "period": { "from": "01-09-2010", "to": "01-02-2011" },
+            "role": ["J2EE Developer"],
+            "environment": ["J2EE spring stack", "semantic web", "rdf", "Eclipse", "Maven"],
+            "activities": ["Technical analysis", "development"],
+            "detail": {
+                "en": "I joined an internal team of developers at IRIS to work on a new document management system ordered by the European Commission. During that mission I analyzed the document storage requirements and implemented a solution based on the Fedora commons repository. I implemented the retrieval of the document with a Spring service layer on top of the document metadata and the RDF language. Finally I helped implementing the solution that processes the data and the metadata provided by a third party company and store it in the Fedora Commons repository."
+            }
+        },
+        {
+            "company": "Alten",
+            "branch": "Belgium",
+            "project": "Amadeus IT Group",
+            "location": "Sofia-Antipolis",
+            "period": { "from": "01-09-2009", "to": "31-08-2010" },
+            "role": ["Functional Analyst"],
+            "environment": ["J2EE middleware", "SOAP", "Eclipse", "Maven"],
+            "activities": ["Support", "Technical analysis", "Development"],
+            "detail": {
+                "en": "I joined the Amadeus Faring team as a junior consultant. My functional understanding of the business and problem solving skills where essential to understand the algorithms used by the faring team for the calculation and rendering of fares during the flight purchase process. My responsibilities where to support the clients with fare issues in the different Amadeus products. My excellent technical knowledge and programming skills where quickly used on different faring projects. I provided technical solutions for the blacklisting of airlines in the faring middleware which I also implemented."
+            }
+        }
+    ],
+    "roles": [
+        {
+            "role": "Software Architect",
+            "level": 2
+        },
+        {
+            "role": "Software Engineer",
+            "level": 4
+        }
+    ],
+    "skills": [
+        {
+            "skill": "Analytical Problem Solving",
+            "level": 4
+        },
+        {
+            "skill": "Atlassian Bamboo",
+            "level": 4
+        },
+        {
+            "skill": "Java Enterprise Edition (JEE)",
+            "level": 4
+        },
+        {
+            "skill": "Developer / Software Engineer",
+            "level": 4
+        },
+        {
+            "skill": "JBoss application server",
+            "level": 3
+        },
+        {
+            "skill": "Tomcat application server",
+            "level": 3
+        },
+        {
+            "skill": "Maven",
+            "level": 5
+        },
+        {
+            "skill": "Continuous Integration",
+            "level": 4
+        },
+        {
+            "skill": "SCRUM Master",
+            "level": 2
+        },
+        {
+            "skill": "Test Driven Development",
+            "level": 2
+        },
+        {
+            "skill": "Behviour Driven Development",
+            "level": 4
+        },
+        {
+            "skill": "Spring framework",
+            "level": 2
+        },
+        {
+            "skill": "HTML",
+            "level": 4
+        },
+        {
+            "skill": "CSS",
+            "level": 4
+        },
+        {
+            "skill": "jQuery",
+            "level": 4
+        },
+        {
+            "skill": "ElasticSearch",
+            "level": 3
+        }
+    ],
+    "languages": [
+        {
+            "language": "english",
+            "level": 4
+        },
+        {
+            "language": "french",
+            "level": 5
+        },
+        {
+            "language": "flemish",
+            "level": 5
+        }
+    ],
+    "objectives": {
+        "en": "Very curious by nature, I always tried to have a deep understanding of how things work. I believe that good foundations are essential to build skyscrapers. I apply that ideology when designing IT solutions. My objective is to become a respected software architect who understands technologies and knows when to best use what’s in my toolbelt to deliver exceptional software."
+    },
+    "education": [
+        {
+            "institution": "Université Catholique de Louvain",
+            "location": "Louvain-La-Neuve",
+            "period": { "from": "01-09-2007", "to": "30-06-2009" },
+            "degree": "Master in computer science"
+        },
+        {
+            "institution": "Université Catholique de Louvain",
+            "location": "Louvain-La-Neuve",
+            "period": { "from": "01-09-2006", "to": "31-08-2007" },
+            "degree": "Preparatory year for the master"
+        },
+        {
+            "institution": "Institut Paul Lambin",
+            "location": "Bruxelles",
+            "period": { "from": "01-09-2002", "to": "30-06-2006" },
+            "degree": "Preparatory year for the master"
+        }
+    ],
+    "interests": [
+        "kendo", "photography", "drawing/painting", "ice hockey"
+    ]
+}

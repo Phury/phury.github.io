@@ -19,129 +19,38 @@
   <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
   <link rel="stylesheet" href="vendor/animate/css/animate.css">
   <link rel="stylesheet" href="css/reset.css">
-  
-<style>
-
-@import 'https://fonts.googleapis.com/css?family=Merriweather';
-@import 'https://fonts.googleapis.com/css?family=Lobster';
-
-body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1em;
-}
-header, main, footer {
-  max-width: 1024px;
-  margin: 1em auto;
-  padding: 1em;
-}
-  
-/* typography */
-  
-p { color: #555; line-height: 2em; font-size: 1.3em; }
-
-p > span { 
-  font-family: 'Lobster', serif;
-  font-size: 1.6em; 
-  background-color: #2DBB28; 
-  color: #fff; 
-  padding: 0 0.3em; 
-}
-
-p > a, nav.navigation > a { color: #2DBB28; padding: 0 0.1em; }
-p > a:hover, nav.navigation > a:hover, p > a.active, nav.navigation > a.active { background-color: #2DBB28; color: #fff;  }
-  
-div.summary > p {
-  font-family: monospace;
-  letter-spacing: 1px;
-  color: #444444;
-  font-size: 1.2em;
-  letter-spacing: 1px;
-  text-align: justify;
-}  
-
-header {
- text-align: center;
-}
-header > img.avatar {
-  border-radius: 50%;
-}
-/*
-header > img.avatar {
-  border-radius: 50%;
-  float: left;
-}
-header > p {
- margin-left: 175px;
-}
-*/
-  
-nav.navigation {
-  text-align: center;
-  font-size: 1.6em;
-}
- 
-nav.social > a {
-  line-height: 0; 
-  font-size: 0;
-  color: transparent; 
-}
-  
-/* gallery */
-div.gallery-wrapper {
-  text-align: center;
-  margin: auto;
-  width: 620px;
-}
-div.gallery-wrapper br { clear: both; }
-div.gallery {
-  float: left;
-}
-  
-div.gallery > a {
-  display: block;
-  float: left;
-  margin: 0 12px 12px 0;
-  width: 171px;
-  line-height: 0;
-}
-  
-div.gallery > a.main {
-  width: auto;
-  height: auto;
-}
-  
-div.gallery > a > img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  border: 0;
-}
-/* add some spacing */
-div.summary, nav.navigation, div.gallery-wrapper {
-  margin-top: 75px;  
-}
-  
-/* animate.css tweaks */
-span.animated {
-  display: inline-block;
-}
-#role {
-  -webkit-animation-delay: .8s;
-     -moz-animation-delay: .8s;
-          animation-delay: .8s;
-}
-
-
-@media (max-width:650px) {
-  div.gallery-wrapper {
-    width: inherit;
-  }
-}
-
-</style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+<div class="menu">
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <nav class="navigation">
+      <a href="/resume/index.html">resume</a>
+      <a href="http://phulkor.tumblr.com/">blog</a>
+      <a href="https://www.instagram.com/phvdv/">photos</a>
+      <!--
+      <a href="#">kendo</a>
+      <a href="#">projects</a>
+      -->
+    </nav>
+  </div>
+  <div class="overlay-action">
+    <a href="javascript:void(0)" class="openbtn" onclick="openNav()">menu</a>
+  </div>
+
+  <script type="text/javascript">
+    function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+    }
+  </script>
+</div>
 
 <header>
   <img src="gallery/medium_profile1.jpg" class="avatar" alt="Profile picture">
@@ -155,15 +64,7 @@ span.animated {
       ... but I try to keep it down to earth. I <a href="https://github.com/Phury">code</a> in and outside of work. I am very passionate about building software. I always want to understand how things work from a high level perspective but also under the hood. My motto is <dfn>`kaizen`</dfn> or continuous improvement, which I learned through my practice of <a href="http://www.yuhikendo.be/YHaccueil.html">kendo</a>. Other than that I love <a href="http://mapleleafs.nhl.com/">ice hockey</a> and I try to develop an eye for <a href="https://www.instagram.com/phvdv/">photography</a>.
     </p>    
   </div>
-  <nav class="navigation">
-    <a href="index.html" class="active">about</a>
-    <a href="http://phulkor.tumblr.com/">blog</a>
-    <a href="https://www.instagram.com/phvdv/">photos</a>
-    <!--
-    <a href="#">kendo</a>
-    <a href="#">projects</a>
-    -->
-  </nav>
+        
   <div id="pscroll" class="gallery-wrapper">
     <div class="gallery">
       <a class="main" href="gallery/hobby_photo.jpg" 
@@ -210,8 +111,6 @@ span.animated {
     -->
   </nav>  
 </footer>
-<script src="vendor/lightbox2/js/lightbox-plus-jquery.min.js"></script>
-<script>
-</script>
+<script type="text/javascript" src="vendor/lightbox2/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
