@@ -23,6 +23,16 @@ var DateFormat = React.createClass({
     }       
 });
 
+var PeriodFormat = React.createClass({
+    render: function() {
+        return (
+            <span className='period'>
+                <DateFormat date={this.props.period.from} /> — <DateFormat date={this.props.period.to} />
+            </span>
+        );
+    }       
+});                 
+
             
 var SocialIcon = React.createClass({
      _mapping: {
@@ -49,6 +59,14 @@ var SkillBar = React.createClass({
                     </div>
                 </div>
             </span>
+        );
+    }
+});
+
+var SkillTag = React.createClass({
+    render: function() {
+        return (
+            <div className="skill">{this.props.name}</div>
         );
     }
 });
@@ -99,7 +117,7 @@ var LanguageInfo = React.createClass({
     
     render: function() {
         var elements = this.props.languages.map(function(elt, i) {
-            return (<li key={i}><SkillBar name={elt.language} percentage={elt.level * 20} /></li>);
+            return (<li key={i}><SkillTag name={elt.language} percentage={elt.level * 20} /></li>);
         });
         return (
             <section className="language">
@@ -131,49 +149,44 @@ var InterestInfo = React.createClass({
 });
 
 var PersonalInfo = React.createClass({
-    getDefaultProps: function() {
-        return {
-          personalInfo: {
-              firstName: "",
-              lastName: ""
-          }
-        };
-    },
     
     render: function() {
+        if (this.props.personalInfo == null) return null;
+
         return (
-            <div className="col-md-3">
-                <section className="overview">
-                    <img className="avatar" src={this.props.personalInfo.avatar} alt="profile picture" />
-                    <h1 className="wow flipInX" data-wow-delay="1s"><nobr>{this.props.personalInfo.firstName}</nobr> <nobr>{this.props.personalInfo.lastName}</nobr></h1>
-                    <h2 className="wow flipInX" data-wow-delay="2s">{this.props.personalInfo.role}</h2>
-                </section>
-                <aside>
-                    <ContactInfo contactInfo={this.props.personalInfo} />
-                    <SocialInfo socialInfo={this.props.personalInfo.social} />
-                    <LanguageInfo languages={this.props.languages} />
-                    <InterestInfo interests={this.props.interests} />
-                </aside>
-            </div>
+            <section className="about">
+                <div className="wrapper"> 
+                    <div className='row'>   
+                        <div className='col-md-5 wow bounceInLeft'>
+                            <section className="overview">
+                                <img className="avatar" src={this.props.personalInfo.avatar} alt="profile picture" />
+                                <h1 className="wow flipInX" data-wow-delay="2s"><nobr>{this.props.personalInfo.firstName}</nobr> <nobr>{this.props.personalInfo.lastName}</nobr></h1>
+                                <h2 className="wow flipInX" data-wow-delay="3s">{this.props.personalInfo.role}</h2>
+                            </section>
+                        </div>
+                        <div className='col-md-7 wow bounceInRight' data-wow-delay="1s">
+                            <h3>About</h3>
+                            <p>{this.props.about.en}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         );
     }
 });
 
 var ExperienceList = React.createClass({
-	getDefaultProps: function() {
-        return {
-          workExperience: []
-        };
-    },
     
     render: function() {
+        if (this.props.workExperience == null) return null;
+
 		var entryList = this.props.workExperience.map(function(elt, i) {
 			return (
-                <section className="timeline-item" key={i}>
-                    <div className="timeline-icon wow bounceInLeft">
+                <section className="timeline-item wow bounceInUp" key={i}>
+                    <div className="timeline-icon">
                         <DateFormat date={elt.period.from} />
                     </div>
-                    <div className="timeline-content wow bounceInRight">
+                    <div className="timeline-content">
                         <h4><span className="company">{elt.company}</span>, <span className="location">{elt.location}</span> — <span className="role">{elt.role}</span></h4>
                         <p>{elt.detail.en}</p>
                     </div>
@@ -182,9 +195,11 @@ var ExperienceList = React.createClass({
 		});
 		return (
 			<section className="experience">
-				<h3>Experience</h3>
-                <div className="timeline">
-				    {entryList}
+                <div className="wrapper"> 
+    				<h3>Experience</h3>
+                    <div className="timeline">
+    				    {entryList}
+                    </div>
                 </div>
 			</section>
 		);
@@ -193,91 +208,100 @@ var ExperienceList = React.createClass({
         
         
 var EducationList = React.createClass({
-	getDefaultProps: function() {
-        return {
-          education: []
-        };
-    },
     
     render: function() {
+        if (this.props.education == null) return null;
+
 		var entryList = this.props.education.map(function(elt, i) {
 			return (
-                <section key={i}>
+                <section key={i} className='wow bounceInUp'>
                      <h4><span className="institution">{elt.institution}</span> — <span className="degree">{elt.degree}</span></h4>
-                     <DateFormat date={elt.period.from} /> — <DateFormat date={elt.period.to} />
+                     <PeriodFormat period={elt.period} />
                 </section>
 			); 
 		});
 		return (
 			<section className="education">
-				<h3>Education</h3>
-				{entryList}
+                <div className='wrapper'>
+                    <h3>Education</h3>
+                    {entryList}
+                </div>
 			</section>
 		);
 	} 
 });
-        
-var SkillList = React.createClass({
-	getDefaultProps: function() {
-        return {
-          skills: []
-        };
-    },
+
+var FooterInfo = React.createClass({
     
     render: function() {
-        var skillsPerRow = 5
+        if (this.props.contactInfo == null) return null;
+
+        return (
+            <section className="footer">
+                <div className='wrapper'>
+                    <div className='row'>
+                        <div className='col-md-4'>
+                            <ContactInfo contactInfo={this.props.contactInfo} />
+                            <SocialInfo socialInfo={this.props.socialInfo} />
+                        </div>
+                        <div className='col-md-4'>
+                            <LanguageInfo languages={this.props.languages} />
+                        </div>
+                        <div className='col-md-4'>
+                            <InterestInfo interests={this.props.interests} />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+    } 
+});
+
+        
+var SkillList = React.createClass({
+    
+    render: function() {
+        if (this.props.skills == null) return null;
+
 		var skillList = this.props.skills.map(function(elt, i) {
             return (
-                <li key={i}><SkillBar name={elt.skill} percentage={elt.level * 20} /></li>
+                <SkillTag key={i} name={elt.skill} percentage={elt.level * 20} />
             );
-		}).reduce(function(r, elt, i) {
-            i % skillsPerRow === 0 && r.push([]);
-            r[r.length-1].push(elt);
-            return r;
-        }, []).map(function(r, i) {
-            return (
-                <div key={i} className="col-md-4"><ul>{r}</ul></div>
-            );
-        });
+		});
 		return (
 			<section className="skills">
-				<h3>Skills</h3>
-				<div className="container-fluid">
-				    <div className="row">
-                        {skillList}
-			         </div>
-			     </div>
+                <div className='wrapper wow bounceInUp'>
+                    <h3>Skills</h3>
+                    <div>{skillList}</div>
+                </div>
 			</section>
 		);
 	} 
 });
 
 var ResumeInfo = React.createClass({
-    getDefaultProps: function() {
-        return {
-            about: {
-                en: ""
-            },
-            objectives: {
-                en: ""
-            }
-        };
-    },
     
     render: function() {
+        if (this.props.objectives == null) return null;
+
         return (
-            <div className="col-md-9">
-                <section className="about">
-                    <h3>About</h3>
-                    <p>{this.props.about.en}</p>
-                </section>
+            <div className="content">
                 <section className="objectives">
-                    <h3>Objectives</h3>
-                    <p>{this.props.objectives.en}</p>
+                    <div className="wrapper wow bounceInUp"> 
+                        <h3>Objectives</h3>
+                        <p>{this.props.objectives.en}</p>
+                    </div>
                 </section>
                 <ExperienceList workExperience={this.props.workExperience} />
                 <SkillList skills={this.props.skills} />
-                <EducationList education={this.props.education} />
+                <EducationList 
+                    education={this.props.education} />
+                <FooterInfo
+                    socialInfo={this.props.socialInfo}
+                    contactInfo={this.props.contactInfo}
+                    languages={this.props.languages}
+                    interests={this.props.interests} />
+
             </div>
         );
     }
@@ -299,19 +323,25 @@ var ResumeApp = React.createClass({
     },
 
     render: function() {
+        if (this.state.personalInfo == null) return null;
+
+        var contactInfo = { phone: this.state.personalInfo.phone, email: this.state.personalInfo.email };
+
 		return (
 			<div className="container-fluid">
 				<div className="row">
 					<PersonalInfo 
-						personalInfo={this.state.personalInfo} 
-						languages={this.state.languages}
-						interests={this.state.interests} />
+                        personalInfo={this.state.personalInfo}
+                        about={this.state.about} />
 					<ResumeInfo
-						about={this.state.about}
 						objectives={this.state.objectives}
 						workExperience={this.state.workExperience}
                         skills={this.state.skills} 
-                        education={this.state.education} />
+                        education={this.state.education}
+                        languages={this.state.languages}
+                        interests={this.state.interests}
+                        socialInfo={this.state.personalInfo.social}
+                        contactInfo={contactInfo} />
 				</div>
 			</div>
 		);
