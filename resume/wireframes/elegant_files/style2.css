@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+    color: #292627;
+}
+
+h1, h2  {
+    font-family: 'Lato', sans-serif;
+}
+h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    padding: 0.2em;
+}
+h3 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #292627;
+    border-bottom: 4px solid #078C2A;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    padding-bottom: 0.3em;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul > li {
+    list-style-type: none;
+}
+
+aside {
+    border-radius: 0 0 0.25em 0.25em;
+    background: #efefef;
+    padding: 1em;
+    box-shadow: 0 3px 0 #ededed;
+}
+
+.overview {
+    text-align: center;
+}
+
+.overview > img.avatar {
+    border-radius: 100px;
+    box-shadow: 0 3px 0 #ededed;
+    
+    -webkit-box-shadow: 1px 1px 2px 0px #708890;
+       -moz-box-shadow: 1px 1px 2px 0px #708890;
+            box-shadow: 1px 1px 2px 0px #708890;
+}
+
+.about, .experience, .education  {
+    background-color: #35bf5a;
+    min-height: 350px;
+    padding: 5em;
+    color: #fff;
+}
+
+.objectives, .skills, .footer {
+    padding: 5em;
+
+}
+
+.about > .wrapper, .experience > .wrapper, .education > .wrapper, .objectives > .wrapper, .skills > .wrapper, .footer > .wrapper {
+    max-width: 966px;
+    margin: auto;
+}
+
+
+    .timeline-item {
+        background-color: #fff;
+        color: #292627;
+        margin: 2.5em 1em;
+        padding: 2em;
+
+        position: relative;
+        -webkit-box-shadow: 1px 1px 2px 0px #708890;
+           -moz-box-shadow: 1px 1px 2px 0px #708890;
+                box-shadow: 1px 1px 2px 0px #708890;
+
+    }
+        .timeline-icon {
+            background-color: #2F899E;
+            color: #fff;
+            padding: 0.6em;
+
+            position: absolute;
+            top: -0.6em;
+            left: 0.6em;
+
+            -webkit-box-shadow: 1px 1px 2px 0px #708890;
+               -moz-box-shadow: 1px 1px 2px 0px #708890;
+                    box-shadow: 1px 1px 2px 0px #708890;
+        }
+
+        .skill {
+            display: inline-block;
+            background-color: #35BF59;
+            color: #fff;
+            margin: 0.3em 0;
+            padding: 0.3em;
+            font-size: 0.9em;
+
+            -webkit-box-shadow: 1px 1px 2px 0px #708890;
+               -moz-box-shadow: 1px 1px 2px 0px #708890;
+                    box-shadow: 1px 1px 2px 0px #708890;
+        }
+            .skills .skill {
+                margin: 0.3em 0.3em;
+            }
+
+
+nav.social > a {
+    line-height: 0; 
+    font-size: 0;
+    color: transparent; 
+    padding-right: 5px;
+}
+
+    .education section {
+        background-color: #fff;
+        color: #292627;
+        margin: 2.5em 1em;
+        padding: 2em;
+
+        position: relative;
+        -webkit-box-shadow: 1px 1px 2px 0px #708890;
+           -moz-box-shadow: 1px 1px 2px 0px #708890;
+                box-shadow: 1px 1px 2px 0px #708890;
+
+    }
+        .education section .period {
+            background-color: #2F899E;
+            color: #fff;
+            padding: 0.6em;
+
+            position: absolute;
+            top: -0.6em;
+            left: 0.6em;
+
+            -webkit-box-shadow: 1px 1px 2px 0px #708890;
+               -moz-box-shadow: 1px 1px 2px 0px #708890;
+                    box-shadow: 1px 1px 2px 0px #708890;
+        }
