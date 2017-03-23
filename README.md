@@ -5,13 +5,18 @@ Hi, my name is Pierre-Henri Van de Velde and this is my website
 
 # Todo
 
-* fix animation for overlay menu
-* add menu to resume (or at least a back to home page)
-* fix fonts and style used between home page and resume
-* put resume in first person
 * use dependency management for scripts
+* show different roles
+* add a projects section
 
 # Release notes
+
+## v3
+
+* resume is only page of the site
+* add navigation and scrollspy
+* correct mistakes and add experience
+* use nice typographic combination 
 
 ## v2
 
