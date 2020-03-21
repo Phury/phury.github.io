@@ -11,6 +11,11 @@ Hi, my name is Pierre-Henri Van de Velde and this is my website
 
 # Release notes
 
+## v4
+
+* restyle of the site: only single page with some contact
+* separate page for simple resume
+
 ## v3
 
 * resume is only page of the site
