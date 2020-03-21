@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>phvdv ~ resume</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Pierre-Henri Van de Velde, software engineer, software architect, java developer, scrum master, java">
+    <meta name="keywords" content="software engineer, software architect, java developer, scrum master, java, fullstack developer, kendo">
+    <meta name="author" content="Pierre-Henri Van de Velde">
+    <meta name="publisher" content="Pierre-Henri Van de Velde">
+    <meta name="Identifier-URL" content="https://phury.github.io">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<header id="home">
+</header>
+<template id="handlebars">
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="#profile">profile</a></li>
+                <li><a href="#workExperience">experience</a></li>
+                <li><a href="#education">education</a></li>
+                <li><a href="#other">other</a></li>
+            </ul>
+        </nav>
+        <a href="#home" class="btn to-top">top</a>
+    </aside>
+    <article class="resume">
+        <section>
+            <h3 id="profile">
+                Profile
+            </h3>
+            <p>
+                {{resume.about.en}}
+            </p>
+            <p>
+                {{resume.objectives.en}}
+            </p>
+        </section>
+        <section>
+            <h3 id="workExperience">
+                Experience
+            </h3>
+            {{#each resume.workExperience}}
+            <h4>
+                {{this.role}} at {{this.company}}, {{this.location.city}}
+            </h4>
+            <p class="meta date">{{this.period.from}} — {{this.period.to}}</p>
+            <p>
+                {{this.overview.en}}
+            </p>
+            {{/each}}
+        </section>
+        <section>
+            <h3 id="education">
+                Education
+            </h3>
+            {{#each resume.education}}
+            <h4>
+                {{this.degree}}, {{this.institution}}, {{this.location.city}}
+            </h4>
+            <p class="meta date">{{this.period.from}} — {{this.period.to}}</p>
+            {{/each}}
+        </section>
+        <div class="extra">
+            <span id="other"></span>
+            <section>
+                <h3 id="skills">Skills</h3>
+                <ul>
+                    {{#each resume.skills}}<li>{{this}}</li>{{/each}}
+                </ul>
+            </section>
+            <section>
+                <h3 id="languages">Languages</h3>
+                <ul>
+                    {{#each resume.languages}}
+                    <li>{{this.language}}: {{this.level}}</a></li>
+                    {{/each}}
+                </ul>
+            </section>
+            <section>
+                <h3 id="interests">Hobbies</h3>
+                {{#each resume.interests}}
+                <li>{{this}}</li>
+                {{/each}}
+            </section>
+            <section>
+                <h3 id="social">Social</h3>
+                <ul>
+                    {{#each resume.personalInfo.social}}
+                    <li><a href="{{this.link}}">{{this.name}}</a></li>
+                    {{/each}}
+                </ul>
+            </section>
+        </div>
+    </article>
+</template>
+<script src="js/jquery.min.js"></script>
+<script src="js/phury.js"></script>
+<script src="js/handlebars.min.js"></script>
+<script src="js/resume.js"></script>
+</body>
+</html>
