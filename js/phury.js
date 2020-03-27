@@ -11,7 +11,7 @@ toFade.on({
 });
 
 var lastId = "",
-	scrollItems = $('[id]');
+	scrollItems = $('h3[id]');
 
 // Bind to scroll
 $(window).scroll(function(){
