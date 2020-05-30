@@ -1,7 +1,15 @@
+/*
+colors:
+
+green: #4CAF50
+teal: #4CAF
+*/
+
 @import url('./normalize.min.css');
 @import url('https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans');
 
 body {
+	border-top: 4px solid #4CAF;
 	font-family: 'PT Mono', monospace;
 	font-size: 1em;
 	line-height: 1.3em;
@@ -13,7 +21,7 @@ h1 {
 	line-height: 1.3em;
 }
 h2 > span {
-	background: #4CAF50;
+	background: #4CAF;
 	color: #fff;
 	line-height: 1.5em;
 }
@@ -22,7 +30,7 @@ h3 {
 	display: inline-block;
 }
 a {
-	color: #4CAF50;
+	color: #4CAF;
 	text-decoration: none;
 }
 a > i {
@@ -43,13 +51,13 @@ nav > ul {
 article {
 	margin: 5em;
 }
-article a {
-	border-bottom: 2px solid #4CAF50;
+article a.active, article a:hover, article a:focus {
+	border-bottom: 2px solid #4CAF;
 }
 article em {
-	color: #4CAF50;
+	color: #444;
+	background-color: #4CAF;
 	text-decoration: none;
-	/*border-bottom: 2px solid #4CAF50;*/
 	font-style: normal;
 }
 section {
@@ -65,7 +73,7 @@ section.contact {
 
 
 .btn {
-	background: #4CAF50;
+	background: #4CAF;
 	color: #fff;
 	padding: 3px 5px;
 	border-radius: 3px;
@@ -142,7 +150,7 @@ article.resume div.extra section {
 	}
 
 	nav > ul > li.active > a, nav > ul > li > a:hover {
-		border-bottom: 3px solid #4CAF50;
+		border-bottom: 3px solid #4CAF;
 	}
 }
 
@@ -166,7 +174,7 @@ article.resume div.extra section {
 		padding: 0.5em 0.3em;
 	}
 	nav > ul > li.active, nav > ul > li:hover {
-		border-right: 3px solid #4CAF50;
+		border-right: 3px solid #4CAF;
 	}
 	nav > ul > li > a {
 		margin-right: 15px;
