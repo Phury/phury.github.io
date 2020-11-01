@@ -98,6 +98,10 @@ p.meta {
 	font-style: italic;
 	font-weight: lighter;
 }
+span.date {
+	font-weight: lighter;
+	font-size: 0.7em;
+}
 
 article.resume section h4 {
 	display: list-item;

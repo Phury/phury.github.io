@@ -35,10 +35,11 @@
 		<nav>
 			<ul>
 				<li><a href="index.html">home</a></li>
-				<!-- <li><a href="blog.html">blog</a></li> -->
-				<li><a href="http://phulkor.tumblr.com/">blog<i>🡕</i></a></li>
+				<li><a href="blog.html">blog</a></li>
 				<li class="active"><a href="resume.html">resume</a></li>
-				<li><hr/></li>
+				<li><a href="qs.html">quantified self</a></li>
+			</ul>
+			<ul>
 				<li><a href="#profile">profile</a></li>
 				<li><a href="#workExperience">experience</a></li>
 				<li><a href="#education">education</a></li>
@@ -49,9 +50,9 @@
 	</aside>
 	<article class="resume">
 		<section>
-			<h3 id="profile">
+			<h1 id="profile">
 				Profile
-			</h3>
+			</h1>
 			<p>
 				{{resume.about.en}}
 			</p>
@@ -60,9 +61,9 @@
 			</p>
 		</section>
 		<section>
-			<h3 id="workExperience">
+			<h1 id="workExperience">
 				Experience
-			</h3>
+			</h1>
 			{{#each resume.workExperience}}
 			<h4>
 				{{this.role}} at {{this.company}}, {{this.location.city}}
@@ -74,9 +75,9 @@
 			{{/each}}
 		</section>
 		<section>
-			<h3 id="education">
+			<h1 id="education">
 				Education
-			</h3>
+			</h1>
 			{{#each resume.education}}
 			<h4>
 				{{this.degree}}, {{this.institution}}, {{this.location.city}}
@@ -87,13 +88,13 @@
 		<div class="extra">
 			<span id="other"></span>
 			<section>
-				<h3 id="skills">Skills</h3>
+				<h1 id="skills">Skills</h1>
 				<ul>
 					{{#each resume.skills}}<li>{{this}}</li>{{/each}}
 				</ul>
 			</section>
 			<section>
-				<h3 id="languages">Languages</h3>
+				<h1 id="languages">Languages</h1>
 				<ul>
 					{{#each resume.languages}}
 					<li>{{this.language}}: {{this.level}}</a></li>
@@ -101,13 +102,13 @@
 				</ul>
 			</section>
 			<section>
-				<h3 id="interests">Hobbies</h3>
+				<h1 id="interests">Hobbies</h1>
 				{{#each resume.interests}}
 				<li>{{this}}</li>
 				{{/each}}
 			</section>
 			<section>
-				<h3 id="social">Social</h3>
+				<h1 id="social">Social</h1>
 				<ul>
 					{{#each resume.personalInfo.social}}
 					<li><a href="{{this.link}}">{{this.name}}</a></li>

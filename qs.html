@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>phvdv ~ quantified self</title>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="description" content="Pierre-Henri Van de Velde, software engineer, software architect, java developer, scrum master, java" />
+	<meta name="keywords" content="software engineer, software architect, java developer, scrum master, java, fullstack developer, kendo" />
+	<meta name="author" content="Pierre-Henri Van de Velde" />
+	<meta name="publisher" content="Pierre-Henri Van de Velde" />
+	<meta name="Identifier-URL" content="https://phury.github.io" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="robots" content="index,follow" />
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+
+	<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	
+	<script
+		src="https://code.jquery.com/jquery-3.5.1.min.js"
+		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+
+	<header id="home">
+	</header>
+	<aside>
+		<nav>
+			<ul>
+					<li><a href="index.html">home</a></li>
+					<li><a href="blog.html">blog</a></li>
+					<li><a href="resume.html">resume</a></li>
+					<li class="active"><a href="qs.html">quantified self</a></li>
+			</ul>
+		</nav>
+		<a href="#home" class="btn to-top">top</a>
+	</aside>
+	<article>
+		<section class="intro" id="intro">
+			<div id="feed"></div>
+		</section>
+	</article>
+<script>
+const URL = `https://api.github.com/gists/9dc7acf008d5983fe59f6a2b515bb5e0`;
+const LIMIT = 100;
+
+$.getJSON(URL, function(data) {
+	let parsed = Papa.parse(
+			data.files['quantified_self.csv'].content,
+			{ header:true }
+	);
+	$.each(parsed.data.reverse(), function(i, el) {
+		if (!el["activity"]) return;
+		const template = `
+			<p class="activity">
+				I did <em>${el["amount"]} ${el["unit"]}</em> 
+				of <em>${el["activity"]}</em> 
+				on <em>${el["date"]}</em>
+			</p>
+		`;
+		 document.getElementById("feed").insertAdjacentHTML("beforeend", template);
+		 return i<LIMIT;
+	});
+});
+</script>
+</body>
+</html>
