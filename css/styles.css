@@ -8,8 +8,16 @@ teal: #4CAF
 @import url('./normalize.min.css');
 @import url('https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans');
 
+html {
+   height: 100%;
+}
+
 body {
-	border-top: 4px solid #4CAF;
+   min-height: 100%;
+}
+
+body {
+	border-top: 1em solid #4CAF;
 	font-family: 'PT Mono', monospace;
 	font-size: 1em;
 	line-height: 1.3em;
@@ -67,11 +75,6 @@ section.intro {
 	margin-top: 200px;
 	text-align: justify;
 }
-section.contact {
-	margin-top: 250px;
-}
-
-
 .btn {
 	background: #4CAF;
 	color: #fff;
@@ -95,6 +98,10 @@ p.meta {
 	font-style: italic;
 	font-weight: lighter;
 }
+span.date {
+	font-weight: lighter;
+	font-size: 0.7em;
+}
 
 article.resume section h4 {
 	display: list-item;
@@ -109,6 +116,17 @@ article.resume section p.meta {
 article.resume div.extra section {
 	display: inline-block;
 	vertical-align:top;
+}
+
+.sr-only {
+	 position: absolute;
+	 width: 1px;
+	 height: 1px;
+	 padding: 0;
+	 margin: -1px;
+	 overflow: hidden;
+	 clip: rect(0,0,0,0);
+	 border: 0;
 }
 
 
