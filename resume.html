@@ -49,41 +49,47 @@
 		<a href="#home" class="btn to-top">top</a>
 	</aside>
 	<article class="resume">
+		<abstract>
+			<h1>{{resume.objectives.en}}</h1>
+		</abstract>
 		<section>
 			<h1 id="profile">
 				Profile
 			</h1>
-			<p>
-				{{resume.about.en}}
-			</p>
-			<p>
-				{{resume.objectives.en}}
-			</p>
+			<div class="container">
+				<p>
+					{{resume.about.en}}
+				</p>
+			</div>
 		</section>
 		<section>
 			<h1 id="workExperience">
 				Experience
 			</h1>
-			{{#each resume.workExperience}}
-			<h4>
-				{{this.role}} at {{this.company}}, {{this.location.city}}
-			</h4>
-			<p class="meta date">{{this.period.from}} — {{this.period.to}}</p>
-			<p>
-				{{this.overview.en}}
-			</p>
-			{{/each}}
+			<div class="container">
+				{{#each resume.workExperience}}
+				<h4>
+					{{this.role}} at {{this.company}}, {{this.location.city}}
+				</h4>
+				<p class="meta date">{{this.period.from}} — {{this.period.to}}</p>
+				<p>
+					{{this.overview.en}}
+				</p>
+				{{/each}}
+			</div>
 		</section>
 		<section>
 			<h1 id="education">
 				Education
 			</h1>
-			{{#each resume.education}}
-			<h4>
-				{{this.degree}}, {{this.institution}}, {{this.location.city}}
-			</h4>
-			<p class="meta date">{{this.period.from}} — {{this.period.to}}</p>
-			{{/each}}
+			<div class="container">
+				{{#each resume.education}}
+				<h4>
+					{{this.degree}}, {{this.institution}}, {{this.location.city}}
+				</h4>
+				<p class="meta date">{{this.period.from}} — {{this.period.to}}</p>
+				{{/each}}
+			</div>
 		</section>
 		<div class="extra">
 			<span id="other"></span>

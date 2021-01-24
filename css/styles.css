@@ -28,6 +28,9 @@ h1 {
 	font-family: 'PT Sans', sans-serif;
 	line-height: 1.3em;
 }
+abstract h1 {
+	font-style: italic;
+}
 h2 > span {
 	background: magenta;
 	color: #fff;
@@ -62,6 +65,10 @@ nav > ul {
 	nav.social a:hover {
 		border: none;
 	}
+	
+.container {
+	margin-left: 1.2rem;
+}	
 article {
 	margin: 5em;
 }
@@ -73,8 +80,8 @@ article em {
 	font-style: normal;
 	
   text-shadow: 
-    -3px -3px 0px cyan, 
-    3px 3px 0px yellow;  
+    -2px -2px 0px cyan, 
+    2px 2px 0px yellow;  
   color: magenta;
 }
 section {
