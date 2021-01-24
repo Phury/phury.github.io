@@ -1,8 +1,8 @@
 /*
 colors:
 
-green: #4CAF50
-teal: #4CAF
+green: magenta50
+teal: magenta
 */
 
 @import url('./normalize.min.css');
@@ -17,7 +17,7 @@ body {
 }
 
 body {
-	border-top: 1em solid #4CAF;
+	border-top: 0.7rem solid magenta;
 	font-family: 'PT Mono', monospace;
 	font-size: 1em;
 	line-height: 1.3em;
@@ -29,7 +29,7 @@ h1 {
 	line-height: 1.3em;
 }
 h2 > span {
-	background: #4CAF;
+	background: magenta;
 	color: #fff;
 	line-height: 1.5em;
 }
@@ -38,8 +38,11 @@ h3 {
 	display: inline-block;
 }
 a {
-	color: #4CAF;
 	text-decoration: none;
+  text-shadow: 
+    -3px -3px 0px cyan, 
+    3px 3px 0px yellow;  
+  color: magenta;
 }
 a > i {
 	color: #444;
@@ -56,17 +59,23 @@ nav > ul {
 		text-decoration: none;
 		border-bottom: 0;
 	}
+	nav.social a:hover {
+		border: none;
+	}
 article {
 	margin: 5em;
 }
 article a.active, article a:hover, article a:focus {
-	border-bottom: 2px solid #4CAF;
+	border-bottom: 2px solid magenta;
 }
 article em {
-	color: #444;
-	background-color: #4CAF;
 	text-decoration: none;
 	font-style: normal;
+	
+  text-shadow: 
+    -3px -3px 0px cyan, 
+    3px 3px 0px yellow;  
+  color: magenta;
 }
 section {
 	margin: 150px 0 3em 0;
@@ -76,7 +85,7 @@ section.intro {
 	text-align: justify;
 }
 .btn {
-	background: #4CAF;
+	background: magenta;
 	color: #fff;
 	padding: 3px 5px;
 	border-radius: 3px;
@@ -168,7 +177,7 @@ article.resume div.extra section {
 	}
 
 	nav > ul > li.active > a, nav > ul > li > a:hover {
-		border-bottom: 3px solid #4CAF;
+		border-bottom: 3px solid magenta;
 	}
 }
 
@@ -192,7 +201,7 @@ article.resume div.extra section {
 		padding: 0.5em 0.3em;
 	}
 	nav > ul > li.active, nav > ul > li:hover {
-		border-right: 3px solid #4CAF;
+		border-right: 3px solid magenta;
 	}
 	nav > ul > li > a {
 		margin-right: 15px;
