@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Statis RSS feed generator</title>
+	<title>Static RSS feed generator</title>
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://phulkor.tumblr.com/rss"/>
 	<script
 		src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -13,7 +13,8 @@
 	</ul>
 <script>
 const RSS_URL = `https://phulkor.tumblr.com/rss`;
-const LIMIT = 5;
+const LIMIT = 10;
+const YEAR = "2021"
 
 $.ajax(RSS_URL, {
   accepts: {
@@ -27,6 +28,7 @@ $.ajax(RSS_URL, {
       .find("item")
       .each(function(i) {
         const el = $(this);
+        const pubDate = el.find("pubDate").text().split(' ');
 
         const template = `
             <li>
@@ -36,7 +38,7 @@ $.ajax(RSS_URL, {
                 ${el.find("title").text()}
               </a>
               <br/>
-              <span class="date">${el.find("pubDate").text().split("2020")[0]}</span>
+              <span class="date">${[pubDate[0], pubDate[1], pubDate[2], pubDate[3]].join(' ')}</span>
             </li>
         `;
 
