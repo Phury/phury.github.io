@@ -1,12 +1,9 @@
-/*
-colors:
-
-green: magenta50
-teal: magenta
-*/
-
 @import url('./normalize.min.css');
 @import url('https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans');
+
+:root {
+  --accent-color: #55a6ff;
+}
 
 html {
    height: 100%;
@@ -17,7 +14,7 @@ body {
 }
 
 body {
-	border-top: 0.7rem solid magenta;
+	border-top: 0.7rem solid var(--accent-color);
 	font-family: 'PT Mono', monospace;
 	font-size: 1em;
 	line-height: 1.3em;
@@ -32,7 +29,7 @@ abstract h1 {
 	font-style: italic;
 }
 h2 > span {
-	background: magenta;
+	background: var(--accent-color);
 	color: #fff;
 	line-height: 1.5em;
 }
@@ -42,14 +39,16 @@ h3 {
 }
 a {
 	text-decoration: none;
-  text-shadow: 
-    -3px -3px 0px cyan, 
-    3px 3px 0px yellow;  
-  color: magenta;
+	color: var(--accent-color);
 }
 a > i {
 	color: #444;
 	font-size: 0.8em;
+}
+.shadow {
+	text-shadow: 
+	    -3px -3px 0px cyan, 
+	    3px 3px 0px yellow;
 }
 nav > ul {
 	list-style-type: none;
@@ -73,26 +72,22 @@ article {
 	margin: 5em;
 }
 article a.active, article a:hover, article a:focus {
-	border-bottom: 2px solid magenta;
+	border-bottom: 2px solid var(--accent-color);
 }
 article em {
 	text-decoration: none;
 	font-style: normal;
-	
-  text-shadow: 
-    -2px -2px 0px cyan, 
-    2px 2px 0px yellow;  
-  color: magenta;
+  color: var(--accent-color);
 }
 section {
-	margin: 150px 0 3em 0;
+	margin: 50px 0 3em 0;
 }
 section.intro {
 	margin-top: 200px;
 	text-align: justify;
 }
 .btn {
-	background: magenta;
+	background: var(--accent-color);
 	color: #fff;
 	padding: 3px 5px;
 	border-radius: 3px;
@@ -184,7 +179,7 @@ article.resume div.extra section {
 	}
 
 	nav > ul > li.active > a, nav > ul > li > a:hover {
-		border-bottom: 3px solid magenta;
+		border-bottom: 3px solid var(--accent-color);
 	}
 }
 
@@ -208,7 +203,7 @@ article.resume div.extra section {
 		padding: 0.5em 0.3em;
 	}
 	nav > ul > li.active, nav > ul > li:hover {
-		border-right: 3px solid magenta;
+		border-right: 3px solid var(--accent-color);
 	}
 	nav > ul > li > a {
 		margin-right: 15px;

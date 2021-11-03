@@ -37,7 +37,6 @@
 				<li><a href="index.html">home</a></li>
 				<li><a href="blog.html">blog</a></li>
 				<li class="active"><a href="resume.html">resume</a></li>
-				<li><a href="qs.html">quantified self</a></li>
 			</ul>
 			<ul>
 				<li><a href="#profile">profile</a></li>
@@ -67,7 +66,13 @@
 			<div class="container">
 				{{#each resume.workExperience}}
 				<h4>
-					{{this.role}} at {{this.company}}, {{this.location.city}}
+					{{this.role}} @{{this.company}}, {{this.location.city}} 
+					{{#ifnoteq this.location.country ../resume.personalInfo.country}}
+					<span>
+						{{resume.personalInfo.country}}
+						({{this.location.country}})
+					</span>
+					{{/ifnoteq}}
 				</h4>
 				<p class="meta date">{{this.period.from}} — {{this.period.to}}</p>
 				<p>
