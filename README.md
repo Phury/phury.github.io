@@ -1,34 +1,38 @@
-# Website
+# create-svelte
 
-Hi, my name is Pierre-Henri Van de Velde and this is my website
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
+## Creating a project
 
-# Todo
+If you're seeing this, you've probably already done this step. Congrats!
 
-* use dependency management for scripts
-* show different roles
-* add a projects section
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-# Release notes
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-## v4
+## Developing
 
-* restyle of the site: only single page with some contact
-* separate page for simple resume
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-## v3
+```bash
+npm run dev
 
-* resume is only page of the site
-* add navigation and scrollspy
-* correct mistakes and add experience
-* use nice typographic combination 
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-## v2
+## Building
 
-* resume in react.js
-* overlay menu
+To create a production version of your app:
 
-## v1
+```bash
+npm run build
+```
 
-* Single page website
-* Lightbox mini gallery
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
