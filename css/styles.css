@@ -1,4 +1,4 @@
-@import url('./normalize.min.css');
+@import url('normalize.css');
 @import url('https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans');
 
 :root {
@@ -6,11 +6,11 @@
 }
 
 html {
-   height: 100%;
+   /*height: 100%;*/
 }
 
 body {
-   min-height: 100%;
+   /*min-height: 100%;*/
 }
 
 body {
@@ -23,7 +23,8 @@ body {
 }
 h1 {
 	font-family: 'PT Sans', sans-serif;
-	line-height: 1.3em;
+	font-size: 1.4em;
+	line-height: 1.6em;
 }
 abstract h1 {
 	font-style: italic;
@@ -83,7 +84,7 @@ section {
 	margin: 50px 0 3em 0;
 }
 section.intro {
-	margin-top: 200px;
+	margin-top: 125px;
 	text-align: justify;
 }
 .btn {
@@ -98,7 +99,8 @@ section.intro {
 	bottom: 23px;
 }
 
-.avatar {
+.avatar,
+.intro .markdown-content img {
 	display: block;
 	margin: 0 20px 0 0;
 	border-radius: 50%;
@@ -129,6 +131,13 @@ article.resume div.extra section {
 	vertical-align:top;
 }
 
+footer {
+	text-align: center;
+	font-size: 0.8em;
+	margin: 1.5em 1.5em 0 1.5em;
+}
+
+
 .sr-only {
 	 position: absolute;
 	 width: 1px;
@@ -139,6 +148,48 @@ article.resume div.extra section {
 	 clip: rect(0,0,0,0);
 	 border: 0;
 }
+
+/* specific content */
+div.feed {
+	display: flex;
+	flex-wrap: wrap;
+}
+div.feed > div.card {
+	flex-grow: 1;
+	width: 25%;
+	border-left: 3px solid #eee;
+	margin: 1em 1em 1em 0;
+	padding: .7em;
+}
+div.feed > div.card:hover {
+	border-left: 3px solid var(--accent-color);
+}
+div.feed p.date,
+div.feed p.classification {
+	line-height: .9em;
+	font-size: .7em;
+	font-style: italic;
+	margin-bottom: .3em;
+}
+/*
+
+.card {
+	border-radius: 5px;
+	border-top: 1px solid var(--accent-color);
+	border-left: 1px solid var(--accent-color);
+	margin: 16px;
+	padding: 16px;
+}
+
+.chip {
+	font-size: 0.8em;
+	background-color: #e0e0e0;
+	padding: 8px 16px;
+	align-items: center;
+	border-radius: 24px;
+
+}
+*/
 
 
 /* Small devices (tablets, 768px and up) */
