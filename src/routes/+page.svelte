@@ -21,11 +21,11 @@ My focus is always on simplicity, clear design, and empowering teams to deliver 
     <section class="contact">
         <h3 id="contact" class="sr-only">Contact</h3>
         <nav class="social">
-            <a href="https://github.com/Phury" target="_blank" rel="noopener"><img src="https://phury.github.io/assets/glyphicons/glyphicons-social-22-github.png" />github</a>
-            <a href="http://stackoverflow.com/users/1598255/ph" target="_blank" rel="noopener"><img src="https://phury.github.io/assets/glyphicons/glyphicons-social-65-stackoverflow.png" />stackoverflow</a>
-            <a href="https://www.linkedin.com/in/pvandevelde" target="_blank" rel="noopener"><img src="https://phury.github.io/assets/glyphicons/glyphicons-social-18-linked-in.png" />linkedin</a>
-            <a href="http://phulkor.tumblr.com/" target="_blank" rel="noopener"><img src="https://phury.github.io/assets/glyphicons/glyphicons-social-9-tumblr.png" />tumblr</a>
-            <a href="https://www.instagram.com/phvdv/" target="_blank" rel="noopener"><img src="https://phury.github.io/assets/glyphicons/glyphicons-social-33-instagram.png" />instagram</a>
+            <a href="https://github.com/Phury" target="_blank" rel="noopener"><img src="https://phury.github.io/glyphicons/glyphicons-social-22-github.png" />github</a>
+            <a href="http://stackoverflow.com/users/1598255/ph" target="_blank" rel="noopener"><img src="https://phury.github.io/glyphicons/glyphicons-social-65-stackoverflow.png" />stackoverflow</a>
+            <a href="https://www.linkedin.com/in/pvandevelde" target="_blank" rel="noopener"><img src="https://phury.github.io/glyphicons/glyphicons-social-18-linked-in.png" />linkedin</a>
+            <a href="http://phulkor.tumblr.com/" target="_blank" rel="noopener"><img src="https://phury.github.io/glyphicons/glyphicons-social-9-tumblr.png" />tumblr</a>
+            <a href="https://www.instagram.com/phvdv/" target="_blank" rel="noopener"><img src="https://phury.github.io/glyphicons/glyphicons-social-33-instagram.png" />instagram</a>
         </nav>
     </section>
 </article>
